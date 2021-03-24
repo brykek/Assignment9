@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Joel Hilton</title>
+    <link rel="favicon" type="image/x-icon" href="~/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<nav class="egg navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" asp-controller="Home" asp-action="index">JOEL HILTON</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" asp-controller="Home" asp-action="index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="bacon">My podcast</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="movies" asp-action="Create">Add to List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="movies" asp-action="Index">Movie List</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--layout page to have it link in all pages. gives the link and renders the body for all of them. -->
+
+<body>
+    @RenderBody()
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
